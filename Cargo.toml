@@ -23,6 +23,8 @@ members = [
     "examples/onnx-mobilenet-v2",
     "examples/pytorch-albert-v2",
     "examples/pytorch-resnet",
+    "examples/sentence-transformers",
+    # "examples/wasm-sentence-transformers",
     "harness/core-proptest-pulse",
     "harness/lstm-proptest-onnx-vs-tf",
     "harness/nnef-inceptionv3",
@@ -89,7 +91,8 @@ serde_json = "1.0"
 string-interner = "0.14"
 tar = "0.4.37"
 tensorflow = "0.17.0"
-tokenizers = "0.13"
+# tokenizers = "0.13"
+tokenizers = { version = "^0.13.2", features = ["unstable_wasm"], default-features = false }
 unicode-normalization = "0.1.19"
 walkdir = "2.3.2"
 core_affinity = "0.8.0"
